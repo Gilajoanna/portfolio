@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import fagforbundetImg from "@/public/fagforbundet.png";
+import instabankImg from "@/public/instabank.png";
+import lumiSyncImg from "@/public/lumisync.png";
 
 export const links = [
   {
@@ -62,25 +62,25 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Fagforbundet member",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked as an iOS-developer on this membership app for a Norwegian union. It gives access to information about your membership and agreements.",
+    tags: ["Swift", "UIKit", "Eureka", "Firebase"],
+    imageUrl: fagforbundetImg,
   },
   {
-    title: "rmtDev",
+    title: "Instabank app",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "I worked as a part-time iOS-developer on this project. It is a banking app. You get a full overview, self-service and easy login with Touch ID or Face ID.",
+    tags: ["Swift", "WebView", "SwiftUI", "UIKit"],
+    imageUrl: instabankImg,
   },
   {
-    title: "Word Analytics",
+    title: "LumiSync",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Bachelor project. I worked as a front-end developer on this project. It is a sync-application syncing data between different systems with a dashboard for admin.",
+    tags: ["React", "Typescript", "Tailwind", "Ruby on Rails"],
+    imageUrl: lumiSyncImg,
   },
 ] as const;
 

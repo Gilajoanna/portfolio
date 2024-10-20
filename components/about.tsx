@@ -17,27 +17,31 @@ export default function About() {
       <p className="mb-3">
         In june 2023 I graduated with a bachelor degree in{" "}
         <span className="font-medium">Frontend development</span>. I am since{" "}
-        august 2023 working fulltime as an <span className="font-medium">iOS developer</span> 
+        august 2023 working fulltime as an{" "}
+        <span className="font-medium">iOS developer</span>
         at Beining&Bogen.{" "}
         <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. My core stack
-        is{" "} <span className="underline">Swift, SwiftUI, UIKit and Core Data</span> for{" "}
+        problem-solving aspect. My core stack is{" "}
+        <span className="underline">
+          Swift, SwiftUI, UIKit, Firebase and Core Data
+        </span>{" "}
+        for <span className="font-medium">mobile development.</span> For{" "}
+        <span className="font-medium">web development </span> it is Javascript{" "}
+        and Typescript with React,{" "}
+        <span className="underline">Next.js, Node.js, and MongoDB.</span> I am
+        also familiar with Kotlin for Android development and Dart for Flutter.{" "}
         <span className="font-medium">
-        mobile development.</span> For <span className="font-medium">web development </span> it is React,{" "}
-        <span className="underline">Next.js, Node.js, and MongoDB.</span>{" "}
-        I am also familiar with TypeScript, Flutter and Firebase as cloud service. I am always looking to
-        learn new technologies. I am currently looking for a{" "}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
+          I am always looking to learn new technologies.
+        </span>
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>, I enjoy music, working out, hiking{" "}
-         and playing video games. I also enjoy{" "}
+        <span className="italic">When I'm not coding</span>, I enjoy music,
+        working out, hiking and playing video games. I also enjoy{" "}
         <span className="font-medium">learning new things</span>. I am currently
-        learning {" "}
-        <span className="font-medium">yoga and pilates</span>. I'm also
-        trying to discover my painting skills even more through some art projects at home.
+        learning <span className="font-medium">yoga and pilates</span>. I'm also
+        trying to discover my painting skills even more through some art
+        projects at home.
       </p>
     </motion.section>
   );
