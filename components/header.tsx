@@ -66,9 +66,9 @@ export default function Header() {
     </header>
   );
 
-  type ActiveSectionProps = (typeof links)[number];
+  type HeaderProps = (typeof links)[number];
 
-  function handleActiveSection({ name }: ActiveSectionProps) {
+  function handleActiveSection({ name }: HeaderProps) {
     setActiveSection(name);
   }
 }
