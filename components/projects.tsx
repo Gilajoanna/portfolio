@@ -11,14 +11,14 @@ export default function Projects() {
   const { ref, inView } = useInView({
     threshold: 0.5,
   });
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   // comments in about.tsx
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("Projects");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <section ref={ref} id="projects" className="scroll-mt-28">

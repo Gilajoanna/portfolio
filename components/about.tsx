@@ -11,15 +11,16 @@ export default function About() {
   const { ref, inView } = useInView({
     threshold: 0.75,
   });
-  const { setActiveSection } = useActiveSectionContext();
+  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
 
   // Since we do not want to set state when rendering we need to use the hook useEffect to synchronize the active section with the current section in view.
   // If invView is true we set the active section to "About".
+  // We also check if the time of the last click is more than 1 second ago. This is to prevent the active section from stopping by all links in between when the user clicks on a link.
   useEffect(() => {
-    if (inView) {
+    if (inView && Date.now() - timeOfLastClick > 1000) {
       setActiveSection("About");
     }
-  }, [inView, setActiveSection]);
+  }, [inView, setActiveSection, timeOfLastClick]);
 
   return (
     <motion.section

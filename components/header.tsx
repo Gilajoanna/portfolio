@@ -9,7 +9,8 @@ import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Header() {
   // The custom hook that let us access the activeSection state, the setActiveSection function and make sure it is not null.
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <header className="z-[999] relative">
@@ -72,5 +73,6 @@ export default function Header() {
 
   function handleActiveSection({ name }: HeaderProps) {
     setActiveSection(name);
+    setTimeOfLastClick(Date.now());
   }
 }
