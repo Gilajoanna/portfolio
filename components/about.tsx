@@ -1,26 +1,12 @@
 "use client";
 
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
-  // to track the visibility of the section we are using the useInView hook. The ref is used to track the visibility of the section and inView is a boolean that tells us if the section is in view or not.
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
-
-  // Since we do not want to set state when rendering we need to use the hook useEffect to synchronize the active section with the current section in view.
-  // If invView is true we set the active section to "About".
-  // We also check if the time of the last click is more than 1 second ago. This is to prevent the active section from stopping by all links in between when the user clicks on a link.
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection, timeOfLastClick]);
+  const { ref } = useSectionInView("About");
 
   return (
     <motion.section
@@ -41,7 +27,7 @@ export default function About() {
         <span className="italic">My favorite part of programming</span> is the
         problem-solving aspect. My core stack is{" "}
         <span className="underline">
-          Swift, SwiftUI, UIKit, Firebase and Core Data
+          Swift with both SwiftUI and UIKit, React Native, Firebase and Core Data
         </span>{" "}
         for <span className="font-medium">mobile development.</span> For{" "}
         <span className="font-medium">web development </span> it is Javascript{" "}
