@@ -3,8 +3,8 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import fagforbundetImg from "@/public/fagforbundet.png";
-import instabankImg from "@/public/instabank.png";
-import lumiSyncImg from "@/public/lumisync.png";
+import instabankImg from "@/public/instabank2.jpg";
+import lumiSyncImg from "@/public/lumisync2.png";
 
 export const links = [
   {
@@ -92,14 +92,14 @@ export const skillsData = [
   "UIKit",
   "JavaScript",
   "TypeScript",
-  "React",
+  "React JS",
+  "React Native",
   "Next.js",
   "Node.js",
   "Git",
   "Tailwind",
   "Flutter",
   "Dart",
-  "Vue",
   "MongoDB",
   "Firebase",
   "Core Data",
